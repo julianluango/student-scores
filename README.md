@@ -38,31 +38,12 @@ pip install pyspark
 
 ---
 
-## 🧩 Estructura del proyecto
-
-```
-student_exam_scores/
-│
-├── data/
-│   └── student_exam_scores.csv
-│
-├── output/
-│   └── processed_student_exam_scores.parquet
-│
-├── scripts/
-│   └── student_exam_scores_etl.py
-│
-└── README.md
-```
-
----
-
 ## 🚀 Ejecución del script
 
 Ejecuta el proceso ETL en tu entorno local de Spark:
 
 ```bash
-spark-submit scripts/student_exam_scores_etl.py
+spark-submit batch.py
 ```
 
 > 💡 También puedes ejecutarlo directamente desde un notebook PySpark o Databricks.
@@ -96,11 +77,11 @@ El proceso está dividido en tres fases principales:
 
 ## 💾 Resultados
 
-El dataset procesado se guarda en formato **Parquet**, optimizado para análisis posteriores.
+El dataset procesado se guarda en formato **CSV**, optimizado para análisis posteriores.
 
 **Ruta de salida:**
 ```
-output/processed_student_exam_scores.parquet
+data/processed_student_exam_scores.csv
 ```
 
 El archivo contiene columnas limpias y enriquecidas, listas para ser analizadas o cargadas en herramientas como Power BI, Databricks o Spark SQL.
@@ -122,15 +103,7 @@ El archivo contiene columnas limpias y enriquecidas, listas para ser analizadas 
 - **Apache Spark** – Procesamiento distribuido
 - **PySpark DataFrames** – Transformación y análisis estructurado
 - **Python** – Script principal y automatización
-- **Parquet** – Almacenamiento optimizado de salida
-
----
-
-## 🧑‍💻 Autor
-
-**Julian Montenegro**  
-Ingeniero de Datos | Análisis y procesamiento de datos con PySpark y Azure  
-📧 Contacto: *(agrega tu correo o LinkedIn si deseas)*
+- **CSV** – Almacenamiento optimizado de salida
 
 ---
 
